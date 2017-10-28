@@ -15,16 +15,24 @@ class DefinitionViewController: UIViewController {
     @IBOutlet weak var definitionLabel: UILabel!
     @IBOutlet weak var emojiPic: UILabel!
     
+    @IBOutlet weak var categoryLabel: UILabel!
+    
+    @IBOutlet weak var birthLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("hey the new viewcontroller works")
         emojiPic.text = emoji
-
+        
         if emoji == "😀" {
-        definitionLabel.text = "standard smiley face"
+            definitionLabel.text = "standard smiley face"
+            categoryLabel.text = "Category: Smiley"
+            birthLabel.text = "Birth Year: 2011"
         }
         if emoji == "😎" {
             definitionLabel.text = "slim shady"
+            categoryLabel.text = "Category: Smiley"
+            birthLabel.text = "Birth Year: 2009"
         }
         if emoji == "🤡" {
             definitionLabel.text = "quit clowning around"

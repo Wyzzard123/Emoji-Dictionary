@@ -56,7 +56,39 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a lovely church" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQs-7w-tbv">
-                                <rect key="frame" x="103" y="393" width="169" height="21"/>
+                                <rect key="frame" x="103.5" y="393" width="168.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Wtz-yi-n51">
+                                <rect key="frame" x="122.5" y="453.5" width="130" height="20.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Y6p-9G-uzf">
+                                        <rect key="frame" x="0.0" y="0.0" width="130" height="20.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qRA-rb-hbz">
+                                                <rect key="frame" x="0.0" y="0.0" width="130" height="20.5"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mhx-lp-05x">
+                                                        <rect key="frame" x="0.0" y="0.0" width="130" height="20.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category: Smiley" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A0N-PM-OYE">
+                                                                <rect key="frame" x="0.0" y="0.0" width="130" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birth Year: 1999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kdQ-39-wGb">
+                                <rect key="frame" x="126.5" y="514" width="123" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -65,13 +97,19 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="WQs-7w-tbv" firstAttribute="centerX" secondItem="02j-5M-4gL" secondAttribute="centerX" id="4y4-r7-YYn"/>
+                            <constraint firstItem="Wtz-yi-n51" firstAttribute="centerX" secondItem="02j-5M-4gL" secondAttribute="centerX" id="CgX-8R-cXz"/>
+                            <constraint firstItem="Wtz-yi-n51" firstAttribute="top" secondItem="WQs-7w-tbv" secondAttribute="bottom" constant="40" id="Rfy-Ld-wZu"/>
+                            <constraint firstItem="kdQ-39-wGb" firstAttribute="centerX" secondItem="02j-5M-4gL" secondAttribute="centerX" id="SC3-2i-ZGg"/>
                             <constraint firstItem="Gcs-1l-77m" firstAttribute="top" secondItem="hCb-kR-LMk" secondAttribute="top" constant="40" id="ecb-e7-hjL"/>
+                            <constraint firstItem="kdQ-39-wGb" firstAttribute="top" secondItem="Wtz-yi-n51" secondAttribute="bottom" constant="40" id="kMO-X3-I7B"/>
                             <constraint firstItem="WQs-7w-tbv" firstAttribute="top" secondItem="Gcs-1l-77m" secondAttribute="bottom" constant="50" id="pHJ-rk-2t5"/>
                             <constraint firstItem="Gcs-1l-77m" firstAttribute="centerX" secondItem="02j-5M-4gL" secondAttribute="centerX" id="yWo-Tw-Zq0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hCb-kR-LMk"/>
                     </view>
                     <connections>
+                        <outlet property="birthLabel" destination="kdQ-39-wGb" id="LjA-4S-clg"/>
+                        <outlet property="categoryLabel" destination="A0N-PM-OYE" id="3SA-hr-U4N"/>
                         <outlet property="definitionLabel" destination="WQs-7w-tbv" id="Lgz-uk-dmg"/>
                         <outlet property="emojiPic" destination="Gcs-1l-77m" id="pk9-fh-Q6N"/>
                     </connections>
